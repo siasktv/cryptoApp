@@ -7,7 +7,8 @@ export default function LandingPage () {
         <div className="w-full min-h-screen bg-gradient-to-b from-[#FEE6F7] to-white">
             <NavBar />
             <Hero />
-            <div className="flex px-20 py-8 gap-20">
+            <div className="flex px-20 py-8 gap-8">
+            <MarketTrendCards />
             <MarketTrendCards />
             <MarketTrendCards />
             <MarketTrendCards />
