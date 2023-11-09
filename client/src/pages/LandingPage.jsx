@@ -1,6 +1,7 @@
 import NavBar from "../components/landingPage/NavBar"
 import Hero from "../components/landingPage/Hero"
 import MarketTrendCards from "../components/landingPage/MarketTrendCards"
+import Features from "../components/landingPage/Features"
 
 export default function LandingPage () {
     return (
@@ -12,6 +13,12 @@ export default function LandingPage () {
             <MarketTrendCards />
             <MarketTrendCards />
             <MarketTrendCards />
+            </div>
+            <div className="flex px-20 py-8 gap-8">
+                <Features />
+                <Features />
+                <Features />
+                <Features />
             </div>
             {/* navbar */}
             {/* hero */}

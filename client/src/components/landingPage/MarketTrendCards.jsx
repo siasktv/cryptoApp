@@ -3,7 +3,7 @@ import chart from "../../assets/chart.png"
 
 export default function MarketTrendCards() {
     return(
-        <div className="flex px-[20px] py-[18px] flex-col shadow-md  gap-4 flex-1 rounded-xl border border-[#EAEAEA] bg-[#FFF]">
+        <div className="flex px-[20px] py-[18px] flex-col gap-4 flex-1 rounded-xl border border-[#EAEAEA] bg-[#FFF]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3.5">
             <img
