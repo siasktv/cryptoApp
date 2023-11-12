@@ -15,7 +15,7 @@ export default function NavBar () {
     , []);
 
     return (
-        <nav className={`flex px-20 py-4 justify-between items-center sticky top-0 z-50 ${navBarActive ? "bg-green-700" : ""}`}>
+        <nav className={`flex px-20 py-6 justify-between items-center sticky top-0 z-50 backdrop-filter backdrop-blur-lg ${navBarActive ? 'bg-white bg-opacity-30' : ""}`}>
             <p className="text-black font-bold text-lg">Crypto <span className="text-green-700 text-lg font-bold">App</span></p>
             <div className="">
                 <ul className="flex items-center gap-24">
