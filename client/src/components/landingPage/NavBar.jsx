@@ -1,6 +1,21 @@
+import { useState, useEffect } from 'react';
+
 export default function NavBar () {
+    const [navBarActive, setNavBarActive] = useState(false);
+
+    const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setNavBarActive(isScrolled);
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);    
+    }
+    , []);
+
     return (
-        <nav className="flex justify-between items-center ">
+        <nav className={`flex px-20 py-4 justify-between items-center sticky top-0 z-50 ${navBarActive ? "bg-green-700" : ""}`}>
             <p className="text-black font-bold text-lg">Crypto <span className="text-green-700 text-lg font-bold">App</span></p>
             <div className="">
                 <ul className="flex items-center gap-24">
