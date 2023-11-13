@@ -68,6 +68,7 @@ export default function LandingPage () {
             </div>
             </div>
             <div className="mt-56">
+            <h2 className="font-bold text-[36px] text-[#0D3E36]">Market Update</h2>
             <CryptoChart/>
             </div>
             {/* navbar */}
