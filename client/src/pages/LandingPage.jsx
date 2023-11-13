@@ -5,7 +5,7 @@ import Hero from "../components/landingPage/Hero"
 import MarketTrendCards from "../components/landingPage/MarketTrendCards"
 import Features from "../components/landingPage/Features"
 import CryptoChart from "../components/CryptoChart"
-
+import { featuresData } from "../components/landingPage/FeaturesData"
 
 
 export default function LandingPage () {
@@ -54,10 +54,17 @@ export default function LandingPage () {
                 </div>
             
             <div className="flex gap-8">
-                <Features />
-                <Features />
-                <Features />
-                <Features />
+                {
+                    featuresData.map((item) => {
+                        return (
+                            <Features 
+                            key={item.id}
+                            data={item}
+                            />
+                        )
+                    })
+                }
+                
             </div>
             </div>
             <div className="mt-56">
