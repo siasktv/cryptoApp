@@ -72,10 +72,11 @@ export default function LandingPage () {
             <h2 className="font-bold text-[36px] text-[#0D3E36]">Market Update</h2>
             <CryptoChart/>
             </div>
-            <div className="mt-56">
+            
+        </div>
+        <div className="mt-56 px-[90px] border-t border-[#EAEAEA] py-16 bg-gray-50">
                 <Footer />
             </div>
-        </div>
         </>
        
     )
