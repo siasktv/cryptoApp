@@ -5,6 +5,7 @@ import Hero from "../components/landingPage/Hero"
 import MarketTrendCards from "../components/landingPage/MarketTrendCards"
 import Features from "../components/landingPage/Features"
 import CryptoChart from "../components/CryptoChart"
+import Footer from "../components/landingPage/Footer"
 import { featuresData } from "../components/landingPage/FeaturesData"
 
 
@@ -71,15 +72,9 @@ export default function LandingPage () {
             <h2 className="font-bold text-[36px] text-[#0D3E36]">Market Update</h2>
             <CryptoChart/>
             </div>
-            {/* navbar */}
-            {/* hero */}
-            {/* marketTrend */}
-            {/* amazingFeatures */}
-            {/* marketUpdate */}
-            {/* footer */}
-            {/* <h1 className="text-3xl font-bold text-red-600">
-      Hello world!
-    </h1> */}
+            <div className="mt-56">
+                <Footer />
+            </div>
         </div>
         </>
        
