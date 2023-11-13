@@ -1,12 +1,27 @@
+import axios from "axios"
+import { useEffect, useState } from "react"
 import NavBar from "../components/landingPage/NavBar"
 import Hero from "../components/landingPage/Hero"
 import MarketTrendCards from "../components/landingPage/MarketTrendCards"
 import Features from "../components/landingPage/Features"
 import CryptoChart from "../components/CryptoChart"
 
-// bg-gradient-to-b from-[#FEE6F7] to-white
+
 
 export default function LandingPage () {
+    const [data, setData] = useState([])
+
+    const getData = async () => {
+        const response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=4&page=1&sparkline=false&locale=en")
+        setData(response.data)
+    }
+
+    console.log(data)
+
+    useEffect(() => {
+        getData()
+    }, [])
+
     return (
         <>
           <NavBar />
@@ -20,10 +35,16 @@ export default function LandingPage () {
             <div className="">
             <h2 className="mb-4 font-semibold">Market Trend</h2>
             <div className="flex gap-8">
-            <MarketTrendCards />
-            <MarketTrendCards />
-            <MarketTrendCards />
-            <MarketTrendCards />
+            {
+                data && data.map((item) => {
+                    return (
+                        <MarketTrendCards 
+                        key={item.id}
+                        data={item}
+                        />
+                    )
+                })
+            }
             </div>
             </div>
             <div className="mt-56">
